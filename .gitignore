@@ -1,0 +1,6 @@
+# Abaikan file objek dan executable
+*.exe
+*.o
+
+# Abaikan folder build jika ada
+/build/

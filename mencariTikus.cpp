@@ -3,10 +3,6 @@
 #include <cstdlib>
 #include <ctime>
 
-#ifdef _WIN32
-#include <windows.h>
-#endif
-
 using namespace std;
 
 /*
@@ -22,11 +18,6 @@ int main(){
     // menentukan seeder/titik awal
     srand(time(NULL)); // time(NULL) mengambil waktu saat ini
     int tikus = rand() % 9 + 1;
-
-    // Dibawah ini untuk membuat simbol
-    #ifdef _WIN32 // memastikan program jalan jika di sistem windows
-    system("chcp 65001 > nul"); // chcp 65001 mengubah code page CMD ke UTF-8, sehingga C++ dapat mencetak simbol khusus seperti Unicode
-    #endif // akhir dari blok
 
     int tebakTikus;
     int jumlahTebakan = 0;
@@ -78,18 +69,9 @@ int main(){
                     }
                     cout << endl;
                 }
-                cout << endl;
-                // menampilkan icon bintang
-                // /u2605: putih, /u2606: hitam
-                cout << "Score: <3.0> \u2605 \u2605 \u2605\n";
-            }else if(jumlahTebakan <= 5){
-                cout << "Jumlah tebakanmu adalah " << jumlahTebakan << endl;
-                cout << endl;
-                cout << "Score: <2.0> \u2605 \u2605 \u2606\n";
             }else{
                 cout << "Jumlah tebakanmu adalah " << jumlahTebakan << endl;
                 cout << endl;
-                cout << "Score: <1.0> \u2605 \u2606 \u2606\n";
             }
         }
 
