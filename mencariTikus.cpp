@@ -89,7 +89,7 @@ int main(){
             }else{
                 cout << "Jumlah tebakanmu adalah " << jumlahTebakan << endl;
                 cout << endl;
-                cout << "Score: <1.0> \u2605 \u2606 \u2606\n \u2606";
+                cout << "Score: <1.0> \u2605 \u2606 \u2606\n";
             }
         }
 
